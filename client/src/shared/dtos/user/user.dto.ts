@@ -1,3 +1,4 @@
+import { Product } from "@/shared/types/product";
 import type {
   User,
   UserBlocked,
@@ -19,6 +20,7 @@ export class UserDto implements User {
   private: UserPrivate;
   blocked?: UserBlocked;
   notifications?: UserNotifications;
+  cart: Product[];
 
   constructor(user: User) {
     this._id = user._id;
@@ -36,5 +38,7 @@ export class UserDto implements User {
     if (user.notifications) {
       this.notifications = new UserNotificationsDto(user.notifications);
     }
+
+    this.cart = user.cart;
   }
 }

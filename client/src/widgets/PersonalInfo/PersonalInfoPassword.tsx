@@ -54,6 +54,7 @@ export const PersonalInfoPassword = ({ user }: PersonalInfo) => {
         ...newUser.private,
         passwordUpdatedAt: new Date().toISOString(),
       },
+      cart: user.cart || [],
     };
 
     if (newUser.private) {

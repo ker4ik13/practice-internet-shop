@@ -94,6 +94,7 @@ export const PersonalInfo = ({ user }: PersonalInfo) => {
       ...user,
       ...newUser,
       updatedAt: new Date().toISOString(),
+      cart: user.cart || [],
     });
 
     delete updatedUser.info.photo;
