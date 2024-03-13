@@ -126,8 +126,6 @@ export class AuthController {
       httpOnly: true,
       sameSite: 'lax',
       expires: new Date(tokens.refresh_token.exp),
-      secure:
-        this.configService.get('NODE_ENV', 'development') === 'production',
       path: '/',
     });
 
@@ -137,8 +135,6 @@ export class AuthController {
       expires: add(new Date(), {
         minutes: 10,
       }),
-      secure:
-        this.configService.get('NODE_ENV', 'development') === 'production',
       path: '/',
     });
 
