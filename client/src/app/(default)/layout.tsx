@@ -6,7 +6,6 @@ import { useAuth } from "@/shared/helpers/auth";
 import { CircularProgress, Stack } from "@mui/joy";
 import { useEffect } from "react";
 import { ToastContainer } from "react-toastify";
-import LoginPage from "./auth/page";
 
 export default function RootLayout({
   children,
@@ -41,9 +40,7 @@ export default function RootLayout({
 
       {!isAuth && !user && !isLoading && (
         <>
-          <main className={s.main}>
-            <LoginPage />
-          </main>
+          <main className={s.main}>{children}</main>
           <ToastContainer containerId={"toast-container"} />
         </>
       )}
