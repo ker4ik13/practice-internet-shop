@@ -153,7 +153,11 @@ const CartPage = () => {
             mt: 4,
           }}
         >
-          Оплатить
+          {user && user.cart && user.cart.length
+            ? `Оплатить ${user.cart
+                .map((item) => item.price)
+                .reduce((a, b) => a + b)} руб.`
+            : "Оплатить"}
         </Button>
       )}
     </Stack>

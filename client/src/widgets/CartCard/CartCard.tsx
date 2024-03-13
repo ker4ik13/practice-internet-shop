@@ -72,10 +72,7 @@ export const CartCard = ({ product }: ProductCardProps) => {
           <p className={s.title}>{product.name}</p>
           <p className={s.desc}>{product.description}</p>
           <Typography color="primary" level="body-lg">
-            {product.price}{" "}
-            <Typography color="neutral" level="body-lg">
-              руб.
-            </Typography>
+            {`${product.price.toLocaleString("ru")} руб.`}
           </Typography>
         </Stack>
         <Stack width="100%" alignItems="center">
