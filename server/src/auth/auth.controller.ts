@@ -75,13 +75,11 @@ export class AuthController {
     await this.authService.deleteRefreshToken(refresh_token);
     res.cookie(REFRESH_TOKEN, '', {
       httpOnly: true,
-      secure: true,
       expires: new Date(),
     });
 
     res.cookie(ACCESS_TOKEN, '', {
       httpOnly: true,
-      secure: true,
       expires: new Date(),
     });
 
