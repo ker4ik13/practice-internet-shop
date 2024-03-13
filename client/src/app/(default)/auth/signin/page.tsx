@@ -68,6 +68,7 @@ const LoginPage = () => {
   if (isAuth && user) {
     return (
       <div className={s.page}>
+        <title>{`Здравствуйте, ${user.info.firstName}!`}</title>
         <Typography level="h3" fontWeight="lg">
           Здравствуйте, {user.info.firstName}
         </Typography>
@@ -85,6 +86,7 @@ const LoginPage = () => {
 
   return (
     <div className={s.page}>
+      <title>Войти</title>
       {errors.length > 0 &&
         errors.map((error) => (
           <p className="error_text" key={error.text}>

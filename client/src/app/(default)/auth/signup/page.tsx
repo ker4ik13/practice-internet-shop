@@ -93,6 +93,7 @@ const RegistrationPage = () => {
 
   return (
     <Box className={s.page}>
+      <title>Зарегистрироваться</title>
       <Card
         component={"div"}
         variant="outlined"

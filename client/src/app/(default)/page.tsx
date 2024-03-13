@@ -69,6 +69,7 @@ const ProductsPage = () => {
   if (!user && !isAuth) {
     return (
       <Stack minHeight="100vh" alignItems="center" justifyContent="center">
+        <title>Войдите в аккаунт</title>
         <Typography level="h3" fontWeight="lg">
           Войдите в аккаунт
         </Typography>
@@ -88,7 +89,8 @@ const ProductsPage = () => {
   }
 
   return (
-    <Stack minHeight="100vh" pt={4} paddingInline={4} position="relative">
+    <Stack minHeight="100vh" padding={4} position="relative">
+      <title>Товары</title>
       {isLoading && (
         <LinearProgress
           variant="solid"
@@ -144,7 +146,7 @@ const ProductsPage = () => {
           <ToggleThemeButton variant="solid" color="warning" />
         </ButtonGroup>
       </Stack>
-      <Stack mt={4} direction="row" gap={2}>
+      <Stack mt={4} direction="row" gap={2} flexWrap="wrap">
         {products.map((product) => (
           <ProductCard product={product} key={product._id} />
         ))}

@@ -89,6 +89,8 @@ export const CartCard = ({ product }: ProductCardProps) => {
             sx={{
               mt: 1.5,
               width: "100%",
+              maxWidth: 250,
+              alignSelf: "flex-start",
             }}
           >
             <Badge

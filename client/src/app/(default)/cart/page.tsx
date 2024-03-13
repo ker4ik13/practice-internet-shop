@@ -66,6 +66,7 @@ const CartPage = () => {
   if (!user && !isAuth) {
     return (
       <Stack minHeight="100vh" alignItems="center" justifyContent="center">
+        <title>Войдите в аккаунт</title>
         <Typography level="h3" fontWeight="lg">
           Войдите в аккаунт
         </Typography>
@@ -85,7 +86,8 @@ const CartPage = () => {
   }
 
   return (
-    <Stack minHeight="100vh" pt={4} paddingInline={4} position="relative">
+    <Stack minHeight="100vh" padding={4} position="relative">
+      <title>Корзина</title>
       {isLoading && (
         <LinearProgress
           variant="solid"
