@@ -7,11 +7,10 @@ import { join } from 'path';
 import { AuthModule } from './auth/auth.module';
 import { multerOptions } from './config';
 import { ArticleModule } from './crud/article/article.module';
-import { BotModule } from './crud/bot/bot.module';
 import { MailModule } from './crud/mail/mail.module';
+import { ProductModule } from './crud/product/product.module';
 import { RoleModule } from './crud/roles/role.module';
 import { UserModule } from './crud/user/user.module';
-import { ProductModule } from './crud/product/product.module';
 
 @Module({
   imports: [
@@ -36,7 +35,6 @@ import { ProductModule } from './crud/product/product.module';
     RoleModule,
     MailModule,
     AuthModule,
-    BotModule,
     ArticleModule,
     ProductModule,
   ],
