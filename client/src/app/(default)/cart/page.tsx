@@ -149,14 +149,15 @@ const CartPage = () => {
           variant="solid"
           color="success"
           sx={{
-            maxWidth: 200,
+            maxWidth: 300,
             mt: 4,
           }}
         >
           {user && user.cart && user.cart.length
             ? `Оплатить ${user.cart
                 .map((item) => item.price)
-                .reduce((a, b) => a + b)} руб.`
+                .reduce((a, b) => a + b)
+                .toLocaleString("ru")} руб.`
             : "Оплатить"}
         </Button>
       )}
